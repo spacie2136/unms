@@ -730,7 +730,7 @@ class Unms
     public function logout()
     {
         if (!$this->is_loggedin) return false;
-        $this->exec_curl('/logout');
+        $this->exec_curl('/v2.1/logout');
         $this->is_loggedin = false;
         return true;
     }
